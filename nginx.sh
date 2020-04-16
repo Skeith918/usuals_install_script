@@ -1,26 +1,29 @@
 #!/bin/bash
 
-function letsencypt (){
+function SslCertGen () {
 while true
 do
-	read -r -p "Enter your domain name (Ensure you have an type A redirection to this server !) : " domain
-	read -r -p "Enter your email address to receive certificate expiration alert : " email
-	echo "You want to generate ssl certificate for domain "$domain" with the email address "$email "..."
-	read -r -p "Are you sure of this informations ? [Y/n]" input
+	read -p "Enter your domain name (Ensure you have an type A redirection to this server !) : " domain
+	read -p "Enter your email address to receive certificate expiration alert : " email
+	echo "You want to generate ssl certificate for domain "$domain" with the email address "$email"..."
+	read -r -p "Are you sure of this informations ? [Y/n/cancel]" input
         case $input in [yY][eE][sS]|[yY])
 		cp /etc/nginx/conf.d/sample.conf /etc/nginx/conf.d/$domain.conf
-		sed -i -e 's/example.com/$domain/g' /etc/nginx/conf.d/$domain.conf
+		sed -i -e 's/example.com/'$domain'/g' /etc/nginx/conf.d/$domain.conf
 		systemctl restart nginx
 		certbot certonly --agree-tos --email $email --webroot -w /var/lib/letsencrypt/ -d $domain
+		sleep 30
 		sed -i -e 's/#//g' /etc/nginx/conf.d/$domain.conf
 		systemctl restart nginx
         break
         ;;
-        [nN][oO]|[nN])
+	[nN][oO]|[nN])
+	;;
+        [cancel])
         break
         ;;
         *)
-        echo "Please answer yes or no.."
+        echo "Please answer yes or no or cancel.."
         ;;
         esac
 done
@@ -61,7 +64,7 @@ while true
 do
         read -r -p "Do You want create a basic ssl virtual host with your domain? [Y/n]" input
         case $input in [yY][eE][sS]|[yY])
-                letsencrypt
+                SslCertGen
         break
         ;;
         [nN][oO]|[nN])
