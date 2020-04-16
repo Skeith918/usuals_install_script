@@ -80,7 +80,7 @@ apt update && apt install gnupg2 software-properties-common -y && apt upgrade -y
 ## BASIC CONFIGURATION
 
 sed -i -e 's/# server_tokens off;/server_tokens off;/g' /etc/nginx/nginx.conf
-sed -i -e 's/include \/etc\/nginx\/sites-enabled\/# include \/etc\/nginx\/sites-enabled/g' /etc/nginx/nginx.conf
+sed -i -e 's/include \/etc\/nginx\/sites-enabled/# include \/etc\/nginx\/sites-enabled/g' /etc/nginx/nginx.conf
 systemctl restart nginx
 
 ## SSL CONFIGURATION
