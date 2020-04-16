@@ -8,7 +8,7 @@ apt update && apt upgrade -y && apt install git
 git clone https://github.com/Skeith918/usuals_install_script.git
 chmod -R a+x usuals_install_script && cd usuals_install_script
 ```
-## List of script
+## List of scripts
 Script Name    | Description
 -------------  | -------------
 install_docker.sh | Install lastest version of Docker, Docker-compose and it dependencies
