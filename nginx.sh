@@ -12,7 +12,7 @@ do
 		sed -i -e 's/example.com/'$domain'/g' /etc/nginx/conf.d/$domain.conf
 		systemctl restart nginx
 		certbot certonly --agree-tos --email $email --webroot -w /var/lib/letsencrypt/ -d $domain
-		sleep 30
+		sleep 10
 		sed -i -e 's/#//g' /etc/nginx/conf.d/$domain.conf
 		systemctl restart nginx
         break
