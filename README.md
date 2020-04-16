@@ -10,4 +10,4 @@ chmod -R a+x usuals_install_script && cd usuals_install_script
 ## List of scripts
 Script Name    | Description
 -------------  | -------------
-install_docker.sh | Install lastest version of Docker, Docker-compose and it dependencies
+docker.sh | Install lastest version of Docker, Docker-compose and it dependencies
