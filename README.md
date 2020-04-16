@@ -10,7 +10,7 @@ chmod -R a+x usuals_install_script && cd usuals_install_script
 ## List of scripts
 Script Name    | Recommended to working with [npm](https://github.com/Skeith918/nginx-proxy-manager_install_script) | Description
 -------------  | ----------- | -------------
-npm.sh | this is "el famoso" npm :wink:	 | (WIP) Adaptation of my [script](https://github.com/Skeith918/nginx-proxy-manager_install_script) which install [nginx-proxy-manager](https://github.com/jc21/nginx-proxy-manager)
+npm.sh | this is el famoso **npm** :wink:	 | (WIP) Adaptation of my [script](https://github.com/Skeith918/nginx-proxy-manager_install_script) which install [nginx-proxy-manager](https://github.com/jc21/nginx-proxy-manager)
 docker.sh | no | Install lastest version of **Docker**, **Docker-compose** and it dependencies
 nginx.sh | no | Install and configure **Nginx**, and optionally SSL and some security configuration
 nodejs.sh | no | (SOON) Quick install latest version of **Nodejs**
