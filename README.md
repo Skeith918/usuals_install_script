@@ -11,3 +11,4 @@ chmod -R a+x usuals_install_script && cd usuals_install_script
 Script Name    | Description
 -------------  | -------------
 docker.sh | Install lastest version of Docker, Docker-compose and it dependencies
+nginx.sh | Install and configure nginx, and optionally SSL and some security configuration
