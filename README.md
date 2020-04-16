@@ -10,9 +10,9 @@ chmod -R a+x usuals_install_script && cd usuals_install_script
 ## List of scripts
 Script Name    | Recommended to working with [npm](https://github.com/Skeith918/nginx-proxy-manager_install_script) | Description
 -------------  | ----------- | -------------
+npm.sh | this is npm :p | (WIP) Adaptation of my [script](https://github.com/Skeith918/nginx-proxy-manager_install_script) which install Install [nginx-proxy-manager](https://github.com/jc21/nginx-proxy-manager)
 docker.sh | no | Install lastest version of Docker, Docker-compose and it dependencies
 nginx.sh | no | Install and configure nginx, and optionally SSL and some security configuration
-npm.sh | this is npm :p | (WIP) Adaptation of my [script](https://github.com/Skeith918/nginx-proxy-manager_install_script) which install Install [nginx-proxy-manager](https://github.com/jc21/nginx-proxy-manager)
 nodejs.sh | no | (SOON) Quick install of latest nodejs
 aws.sh | no | (SOON) Install aws and aws-cli in virtualenv
 matrix.sh | yes | (WIP) Install and configure Stack of Matrix-Synapse / Riot / Turn in one server.
