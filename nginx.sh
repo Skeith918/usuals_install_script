@@ -24,7 +24,6 @@ main_menu
 }
 
 function letsencrypt_conf () {
-
 ## DEPENDENCIES
 apt update 1&2>/dev/null
 apt install certbot openssl -y 1&2>/dev/null
@@ -83,7 +82,6 @@ done
 main_menu
 }
 
-
 # MAIN MENU
 function main_menu () {
 trap "echo 'Control-C cannot been used now >:) ' ; sleep 1 ; clear ; continue " 1 2 3
@@ -106,7 +104,7 @@ do
 	clear
 
 	case "$answer" in
-		[1]*) install_nginx ;;
+		[1]*) install_nginx;;
 		[2]*) letsencrypt_conf;;
 		[3]*) ssl_cert_gen;;
 
@@ -118,5 +116,4 @@ do
 	read dummy
 done
 }
-
 main_menu
