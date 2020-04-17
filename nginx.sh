@@ -90,32 +90,32 @@ trap "echo 'Control-C cannot been used now >:) ' ; sleep 1 ; clear ; continue " 
 
 while true
 do
-  clear
-  echo "\t NGINX INSTALLATION
+	clear
+	echo "\t NGINX INSTALLATION
 
-\t 1 -- \t Install Nginx
-\t 2 -- \t Install SSL / Letsencrypt configuration
-\t 3 -- \t Generate sample SSL virtualhost of your domain
+	\t 1 -- \t Install Nginx
+	\t 2 -- \t Install SSL / Letsencrypt configuration
+	\t 3 -- \t Generate sample SSL virtualhost of your domain
 
-\t Q -- \t QUIT (Leave this menu program)
+	\t Q -- \t QUIT (Leave this menu program)
 
-\t Type an option
-\t And type RETURN to back to main menu\c"
+	\t Type an option
+	\t And type RETURN to back to main menu\c"
 
-  read answer
-  clear
+	read answer
+	clear
 
-  case "$answer" in
-    [1]*) install_nginx ;;
-    [2]*) letsencrypt_conf;;
-    [3]*) ssl_cert_gen;;
+	case "$answer" in
+		[1]*) install_nginx ;;
+		[2]*) letsencrypt_conf;;
+		[3]*) ssl_cert_gen;;
 
-    [Qq]*)  echo "See you soon..." ; exit 0 ;;
-    *)      echo "Please choose an option..." ;;
-  esac
-  echo ""
-  echo "type RETURN to back to main menu"
-  read dummy
+		[Qq]*)  echo "See you soon..." ; exit 0 ;;
+		*)      echo "Please choose an option..." ;;
+	esac
+	echo ""
+	echo "type RETURN to back to main menu"
+	read dummy
 done
 }
 
