@@ -18,3 +18,4 @@ aws.sh | no | (SOON) Install **aws** and **aws-cli** in virtualenv
 matrix.sh | yes | (WIP) Install and configure stack of [Matrix-Synapse](https://github.com/matrix-org/synapse) / [Riot](https://github.com/vector-im/riot-web) / [CoTurn](https://github.com/coturn/coturn) in one server.
 waveline.sh | yes | (SOON) Install and configure [Waveline Server](https://github.com/Wellenline/waveline-server) and it [Web App](https://github.com/Wellenline/waveline-web)
 wazop.sh | no | (WIP) Install a Wazo Platform ready to been configured
+lufi.sh | yes | (WIP) Install file transfer system [Lufi](https://framagit.org/fiat-tux/hat-softwares/lufi)
