@@ -19,3 +19,5 @@ matrix.sh | yes | (WIP) Install and configure stack of [Matrix-Synapse](https://
 waveline.sh | yes | (SOON) Install and configure [Waveline Server](https://github.com/Wellenline/waveline-server) and it [Web App](https://github.com/Wellenline/waveline-web)
 wazop.sh | no | (WIP) Install a Wazo Platform ready to been configured
 lufi.sh | yes | (WIP) Install file transfer system [Lufi](https://framagit.org/fiat-tux/hat-softwares/lufi)
+nextcloud.sh | yes | (WIP) Install Nextcloud instance with docker
+upgrade_nextcloud.sh | no | Upgrade bare-metal nextcloud to wanted version 
