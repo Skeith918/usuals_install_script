@@ -3,7 +3,7 @@
 apt update && apt install unzip jq -y
 
 function read_param (){
-  param=$(jq -r '.'$1'.'$2'' ./nextcloud/env_upgrade.json)
+  param=$(jq -r '.'$1'.'$2'' ./env_upgrade.json)
   echo $param
 }
 

@@ -1,5 +1,6 @@
 # Usuals Installation Script
 This is a list of installation and configuration scripts of some services __Only tested on debian buster__ (but it must work on previous version like jessie or stretch and recent version of Ubuntu), just add execution right to the reposity after clone and enjoy !
+All scripts had these properly documentation, check the directory to read it !
 
 ## Install guide for noobs (and StarPrime :stuck_out_tongue_winking_eye:) just follow bellow commands :point_down:
 ```

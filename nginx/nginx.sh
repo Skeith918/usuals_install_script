@@ -43,9 +43,9 @@ done
 
 ## CONFIGURATION FILE INSTALLATION
 mkdir -p /var/lib/letsencrypt/.well-known && chgrp www-data /var/lib/letsencrypt && chmod g+s /var/lib/letsencrypt
-cp ./nginx/letsencrypt.conf $NGINX_SNIPPETS\letsencrypt.conf
-cp ./nginx/ssl.conf $NGINX_SNIPPETS\ssl.conf
-cp ./nginx/sample.conf $NGINX_WEB_PATH\sample.conf
+cp ./letsencrypt.conf $NGINX_SNIPPETS\letsencrypt.conf
+cp ./ssl.conf $NGINX_SNIPPETS\ssl.conf
+cp ./sample.conf $NGINX_WEB_PATH\sample.conf
 
 echo "Done !"
 echo "Just copy sample.conf virtualhost file in /etc/nginx/conf.d/sample.conf and modify !"
