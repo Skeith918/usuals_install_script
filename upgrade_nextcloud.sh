@@ -1,20 +1,27 @@
-# Set variables
-nextcloud_sysuser=
-nextcloud_current_dir=
-nextcloud_app_dir=
-nextcloud_wanted_version=
+# Install dependencies
+
+apt update && apt install unzip jq -y
+
+function read_param (){
+  param=$(jq -r '.'$1'.'$2'' ./nextcloud/env_upgrade.json)
+  echo $param
+}
+
+function set_param (){
+nextcloud_sysuser=$(read_param nextcloud sysuser)
+nextcloud_current_dir=$(read_param nextcloud parent_pathdir)
+nextcloud_app_dir=$(read_param nextcloud appdir_name)
+nextcloud_wanted_version=$(read_param nextcloud wanted_version)
 nextcloud_current_version=$(sudo -u $nextcloud_sysuser php $nextcloud_current_dir/$nextcloud_app_dir/occ --version | tail -n1 | cut -d ' ' -f2)
 nextcloud_backup_dir=/opt/nextcloud-$nextcloud_current_version-backup-`date +"%Y%m%d"`
 
-nextcloud_dbuser=
-nextcloud_dbpass=
-nextcloud_dbhost=
-nextcloud_db=
+nextcloud_dbuser=$(read_param nextcloud dbuser)
+nextcloud_dbpass=$(read_param nextcloud dbpass)
+nextcloud_dbhost=$(read_param nextcloud dbhost)
+nextcloud_db=$(read_param nextcloud dbname)
+}
 
-
-# Install dependencies
-
-apt update && apt install unzip -y
+set_param
 
 # Enable maintenance mode
 sudo -u $nextcloud_sysuser php $nextcloud_current_dir/$nextcloud_app_dir/occ maintenance:mode --on
